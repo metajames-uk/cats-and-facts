@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import "./App.css";
+import "./App.scss";
 import { Navbar } from "./components/layout/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { About } from "./components/pages/About";
@@ -30,17 +30,14 @@ const App = () => {
               <Route exact path="/">
                 <div className="RandomGenerateFact">
                   <button onClick={getRandomFact}>
-                    Generate a fact about cats
+                    Give me fact <span class="icon-paw-print"></span>
                   </button>
                 </div>
-                <div className="Random Fact">
-                  {randomFact.length !== 0 ? (
+                <div className="RandomFact">
+                  {randomFact.length !== 0 && (
                     <div>
-                      <h3>Random Cat Fact</h3>
-                      <p>{randomFact.fact}</p>
+                      <p class="">{randomFact.fact}</p>
                     </div>
-                  ) : (
-                    <div></div>
                   )}
                 </div>
               </Route>
