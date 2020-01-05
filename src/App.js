@@ -3,6 +3,7 @@ import "./App.scss";
 import { Navbar } from "./components/layout/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { About } from "./components/pages/About";
+import { Index } from "./components/pages/Index";
 
 const App = () => {
   const [randomFact, setRandomFact] = useState({
@@ -18,30 +19,19 @@ const App = () => {
     });
   };
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
         <Fragment>
           <header>
             <h1>Facts of cats</h1>
             <Navbar />
           </header>
-          <div className="container">
+          <div className='container'>
             <Switch>
-              <Route exact path="/">
-                <div className="RandomGenerateFact">
-                  <button onClick={getRandomFact}>
-                    Give me fact <span class="icon-paw-print"></span>
-                  </button>
-                </div>
-                <div className="RandomFact">
-                  {randomFact.length !== 0 && (
-                    <div>
-                      <p class="">{randomFact.fact}</p>
-                    </div>
-                  )}
-                </div>
+              <Route exact path='/'>
+                <Index handleClick={getRandomFact} randomFact={randomFact} />
               </Route>
-              <Route exact path="/about">
+              <Route exact path='/about'>
                 <About></About>
               </Route>
             </Switch>
