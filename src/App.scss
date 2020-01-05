@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
 }
 body,
 html {
@@ -7,8 +8,7 @@ html {
   margin: 0;
 }
 .App {
-  font-family: sans-serif;
-  background-color: #ecd444;
+  background-color: #eee;
   min-height: 100vh;
   color: #595457;
 }
@@ -58,19 +58,19 @@ header {
 
 .RandomGenerateFact button {
   padding: 10px;
-  background-color: #595457;
+  background-color: #f26419;
   border: none;
   outline: none;
   color: white;
   font-weight: 600;
-  border-radius: 2px;
+  border-radius: 24px;
   margin-bottom: 30px;
   cursor: pointer;
   transition: background-color 0.1s ease-out;
   font-size: 20px;
 
   .icon-paw-print {
-    background-color: #f26419;
+    background-color: white;
     transition: background-color 0.1s ease-out;
     mask-image: url("./assets/images/animal-prints.svg");
     height: 20px;
@@ -80,7 +80,7 @@ header {
   }
 
   &:hover {
-    background-color: lighten(#595457, 10%);
+    background-color: lighten(#f26419, 10%);
     transition: background-color 0.1s ease-in;
 
     .icon-paw-print {
