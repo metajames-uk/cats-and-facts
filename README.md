@@ -1,3 +1,7 @@
+# Cat Facts Generator
+
+App built with React to generate random cat facts
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
