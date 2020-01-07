@@ -8,7 +8,7 @@ it("renders h1 title 'Facts of cats'", () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test("renders button that generates a fact", () => {
+it("renders button that generates a fact", () => {
   const { getByText } = render(<App />);
   const buttonElement = getByText(/Give me fact/i);
   fireEvent.click(buttonElement);
